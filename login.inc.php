@@ -10,7 +10,7 @@
         $password = $_POST['password'];
 
         // Query database for row exist or not
-        $sql  = 'SELECT uid FROM users WHERE  username = :username AND password = :password';
+        $sql  = 'SELECT * FROM users WHERE  username = :username AND password = :password';
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':username', $username, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
@@ -20,7 +20,6 @@
             $row_all = $stmt->fetchall(PDO::FETCH_ASSOC);
             header('Content-type: application/json');
             $result = json_encode($row_all);
-
         }
         elseif (!$stmt->rowCount())
             $result = "false";
