@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2017 at 02:37 AM
+-- Generation Time: Apr 24, 2017 at 05:06 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `mark`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beitsem8e`
+--
+
+CREATE TABLE IF NOT EXISTS `beitsem8e` (
+  `students` varchar(32) NOT NULL,
+  `Enterprise Resource Planning-LA` int(2) NOT NULL DEFAULT '0',
+  `Enterprise Resource Planning-LT` int(2) NOT NULL DEFAULT '10'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `beitsem8e`
+--
+
+INSERT INTO `beitsem8e` (`students`, `Enterprise Resource Planning-LA`, `Enterprise Resource Planning-LT`) VALUES
+('60003130010', 5, 10),
+('60003130011', 6, 10),
+('60003130012', 7, 10),
+('60003130013', 8, 10),
+('60003130014', 9, 10);
 
 -- --------------------------------------------------------
 
@@ -163,8 +186,8 @@ CREATE TABLE IF NOT EXISTS `teachers` (
 --
 
 INSERT INTO `teachers` (`tid`, `username`, `password`, `name`, `subject1`, `subject2`, `subject3`, `subject4`, `subject5`, `subject6`, `subject7`, `subject8`, `subject9`) VALUES
-(1, '70003130001', '70003130001', 'Arjun Jaiswal', 'Enterprise Resource Planning', 'Enterprise Resource Planning - Prac', '', '', '', '', '', '', ''),
-(2, '70003130002', '70003130002', 'Dr. Abhijit R. Joshi', 'Computer Simulation and Modeling - Th', 'Computer Simulation and Modeling - Prac', 'Automata Theory - Th', 'Automata Theory - Prac', '', '', '', '', '');
+(1, '70003130001', '70003130001', 'Arjun Jaiswal', 'Enterprise Resource Planning.BEITsem8E', 'Enterprise Resource Planning - Prac.BEITsem8E', '', '', '', '', '', '', ''),
+(2, '70003130002', '70003130002', 'Dr. Abhijit R. Joshi', 'Computer Simulation and Modeling - Th.BEITsem8E', 'Computer Simulation and Modeling - Prac.BEITsem8E', 'Automata Theory - Th.SEITsem4E', 'Automata Theory - Prac.SEITsem4E', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
