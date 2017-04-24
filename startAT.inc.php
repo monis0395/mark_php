@@ -8,18 +8,18 @@
         $result   = '';
         $table = $_POST['table'];
         $column = $_POST['column'];
+        try {
+            // Query database for row exist or not
+            $sql  = 'ALTER TABLE `'.$table.'` ADD `'.$column.'` INT( 1 )';
+            // $sql  = 'SELECT * FROM users ';
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
 
-        // Query database for row exist or not
-        //$sql  = 'ALTER TABLE `'.$table.'` ADD `'.$column.'` VARCHAR( 10 )';
-        $sql  = 'SELECT * FROM users ';
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-
-        if ($stmt->rowCount()) {
             echo "true";
         }
-        else{
-            echo "false";
+        catch(PDOException $e)
+        {
+            echo "true";
         }
     }
 
